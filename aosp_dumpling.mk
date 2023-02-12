@@ -12,9 +12,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/oneplus/dumpling/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_dumpling
+PRODUCT_NAME := aosp_dumpling
 PRODUCT_DEVICE := dumpling
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
@@ -35,3 +35,14 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 BUILD_FINGERPRINT := OnePlus/OnePlus5T/OnePlus5T:10/QKQ1.191014.012/2010292059:user/release-keys
 
 TARGET_VENDOR := oneplus
+
+# Elixir Flags
+IS_PHONE := true
+ELIXIR_MAINTAINER := Saad
+ELIXIR_BUILD_TYPE := OFFICIAL
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_SUPPORTS_GOOGLE_RECORDER := false
+TARGET_INCLUDE_STOCK_ACORE := false
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_CALL_RECORDING := false
